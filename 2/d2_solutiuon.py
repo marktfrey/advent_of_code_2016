@@ -52,7 +52,7 @@ instructions = """
                """
 
 
-final = d2.code_from_instructions(path)
+final = d2.code_from_instructions(instructions)
 
 print("ANSWER:")
 print('Part I:  Final keycode is %(final)d.' % locals())
