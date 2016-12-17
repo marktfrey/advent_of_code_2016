@@ -14,5 +14,9 @@ class AdventOfCodeDay1TestCase(unittest.TestCase):
        result = d1.ending_distance_from_origin(path)
        self.assertEqual(expected, result)
 
+  def test_first_revisited_distance_from_origin(self):
+    result = d1.first_revisited_distance_from_origin('R8, R4, R4, R8')
+    self.assertEqual(4, result)
+
 if __name__ == '__main__':
   unittest.main()
