@@ -20,7 +20,7 @@ import d3
 # In your puzzle input, how many of the listed triangles are possible?
 
 triangles = """
- 330  143  338
+  330  143  338
   769  547   83
   930  625  317
   669  866  147
@@ -1756,8 +1756,29 @@ triangles = """
   356  902  922
 """
 
-final = d3.valid_triangle_count_from_triples(triangles)
+final = d3.valid_triangle_count_from_horizontal_triples(triangles)
 
 print("ANSWER:")
 print('Part I:   Final valid triangle count is %(final)d.' % locals())
 
+# --- Part Two ---
+
+# Now that you've helpfully marked up their design documents, it occurs to you
+# that triangles are specified in groups of three vertically. Each set of three
+# numbers in a column specifies a triangle. Rows are unrelated.
+
+# For example, given the following specification, numbers with the same hundreds
+# digit would be part of the same triangle:
+
+# 101 301 501
+# 102 302 502
+# 103 303 503
+# 201 401 601
+# 202 402 602
+# 203 403 603
+
+# In your puzzle input, and instead reading by columns, how many of the listed
+# triangles are possible?
+
+final2 = d3.valid_triangle_count_from_vertical_triples(triangles)
+print('Part II:  Final valid triangle count is %(final2)d.' % locals())
