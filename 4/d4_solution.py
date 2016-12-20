@@ -967,3 +967,6 @@ final = d4.sum_of_valid_sectors(codes)
 
 print("ANSWER:")
 print('Part I:  Sum of real sector ids %(final)d.' % locals())
+
+print('Part II: Not really the answer, but a list that will help you find it.')
+d4.output_valid_sector_names(codes)
