@@ -23,8 +23,8 @@ class AdventOfCodeDay6TestCase(unittest.TestCase):
            enarar
            """
 
-    result = d6.signal_from_string(code)
-    self.assertEqual('easter', result)
+    self.assertEqual('easter', d6.signal_from_string(code))
+    self.assertEqual('advent', d6.signal_from_string(code, True))
 
 if __name__ == '__main__':
   unittest.main()

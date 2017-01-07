@@ -586,6 +586,5 @@ zikpwtqz
 zckxtclz
 """
 
-final = d6.signal_from_string(code)
-print("ANSWER:")
-print('Part I:  signal is {:s}.'.format(final))
+print('Part I:  signal is {:s}.'.format(d6.signal_from_string(code)))
+print('Part II: signal is {:s}.'.format(d6.signal_from_string(code, True)))

@@ -13,11 +13,12 @@ def columns_from_rows(rows):
 
   return output
 
-def letter_frequency(col):
-  return sorted([(v, k) for k, v in Counter(col).items()], reverse = True)
+def letter_frequency(col, inverse=False):
+  rev = not inverse
+  return sorted([(v, k) for k, v in Counter(col).items()], reverse = rev)
 
-def signal_from_string(code):
+def signal_from_string(code, inverse_frequency=False):
   rows = parse_lines_from_string(code)
   columns = columns_from_rows(rows)
-  
-  return ''.join([letter_frequency(col)[0][1] for col in columns])
+
+  return ''.join([letter_frequency(col, inverse_frequency)[0][1] for col in columns])
